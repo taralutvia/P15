@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+ struct mahasiswa {
+ char nim[30];
+char nama[15]; 
+int notelpon;
+int nilaitugas;
+int nilaiuts;
+int nilaiuas;
+int nilaiquis;
+float nilaiakhir;
+};
+mahasiswa mhs;
+
+void setmahasiswa() {
+       cout<<"NIM      :";
+       cin>>mhs.nim; 
+       cout<<"nama     :";
+       cin>>mhs.nama;
+       cout<<"No.Telepon :";
+       cin>>mhs.notelpon;
+       cout<<"Nilai tugas     :";
+       cin>>mhs.nilaitugas;
+       cout<<"Nilai UTS :";
+       cin>>mhs.nilaiuts;
+       cout<<"Nilai UAS     :";
+       cin>>mhs.nilaiuas;
+       cout<<"Nilai Quis     :";
+       cin>>mhs.nilaiquis;
+       cout<<endl;
+       cout<<endl;
+       mhs.nilaiakhir=0.25*mhs.nilaiuas+0.25*mhs.nilaiuts+0.30*mhs.nilaitugas+0.20*mhs.nilaiquis;
+    }
+    
+void showinfomahasiswa(){
+        cout<<"Laporan hasil belajar";
+        cout<<"NIM           :   "<<mhs.nim<<endl;
+        cout<<"Nama          :   "<<mhs.nama<<endl;
+        cout<<"No Telepon    :   "<<mhs.notelpon<<endl;
+        cout<<"Nilai Tugas   :   "<<mhs.nilaitugas<<endl;
+         cout<<"Nilai UTS    :   "<<mhs.nilaiuts<<endl;
+        cout<<"Nilai UAS     :   "<<mhs.nilaiuas<<endl;
+        cout<<"Nilai Quis    :   "<<mhs.nilaiquis<<endl;
+    }
+    
+int main() {
+    
+    setmahasiswa();
+    showinfomahasiswa();
+    cout<<"Nilai akhir      :"<<mhs.nilaiakhir<<endl;
+}
