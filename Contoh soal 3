@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+
+int main(){
+     int i ;
+     struct{
+     char nim[5];
+     char nama[15];
+     float nilai;
+     int notelepon;
+     int nilai_tugas;
+     int nilai_uts;
+     int nilai_uas;
+     int nilai_quiz;
+     float nilai_akhir
+    
+} mhs[5];
+ 
+   for(i=1; i<=3; i++){
+   cout<<"masukan NIM = ";
+   cin>>mhs[i].nim;
+   cout<<"masukan Nama = ";
+   cin>>mhs[i].nama;
+   cout<<"no telepon =";
+   cin>>mhs[i].notelepon;
+   cout<<"Nilai Tugas = ";
+   cin>>mhs[i].nilai_tugas;
+   cout<<"Nilai UTS = ";
+   cin>>mhs[i].nilai_uas;
+   cout<<"Nilai Akhir = ";
+   cin>>mhs[i].nilai_akhir;
+   mhs[i].nilai_akhir=0.25*mhs[i].nilai_uas+0.25*mhs[i].nilai_uts+0.3*mhs[i].nilai_tugas+0.2*mhs[i].nilai_quiz;
+}
+cout<<endl;
+cout<<"data Mahasiswa"<<endl;
+ 
+for(i=1; i<=2; i++){
+    cout<<"Data Ke - "<<i<<endl;
+    cout<<"NIM = "<<mhs
+    [i].nim<<endl;
+    cout<<"Nama = "<<mhs
+    [i].nama<<endl;
+cout<<"no telepon ="<<mhs[i].notelepon<<endl;
+
+   cout<<"Nilai Tugas = "<<mhs[i].nilai_tugas<<endl;
+   cout<<"Nilai UTS = "<<mhs[i].nilai_uts<<endl;
+    cout<<"Nilai Akhir = "<<mhs[i].nilai_akhir<<endl;
+}
+return 0;
+}
